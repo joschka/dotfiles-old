@@ -1,0 +1,44 @@
+[user]
+	name = Joschka
+	email = joschka@users.noreply.github.com
+
+[alias]
+	s = status --short --branch
+  br = branch
+  ci = commit --verbose
+	ca = commit --amend
+	cm = commit -m
+	co = checkout
+  d = diff
+  ds = diff --staged
+	uc = reset --soft HEAD^1
+	uc2 = reset --soft HEAD^2
+	uc3 = reset --soft HEAD^3
+	uc4 = reset --soft HEAD^4
+	uc5 = reset --soft HEAD^5
+	cfg = config --global
+	sta = stash --include-untracked
+  # show history of given path
+	lgf = log --patch --follow --
+	cfgl = config --global --list
+	cfge = config --global --edit
+	rb = rebase
+	rbd = rebase develop
+	ucd = reset --soft develop
+
+[diff]
+  colorMoved = default
+
+[merge]
+	conflictStyle = diff3
+
+[mergetool]
+	keepBackup = false
+
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+
+[push]
+	default = current
+[init]
+	defaultBranch = main

@@ -1,0 +1,28 @@
+{
+  "prettier.onlyUseLocalVersion": true,
+  "coc.preferences.formatOnSaveFiletypes": ["css", "javascript", "prisma"],
+	"tailwindCSS.htmlLanguages": [
+		"blade",
+		"edge",
+		"eelixir",
+		"ejs",
+		"elixir",
+		"elm",
+		"erb",
+		"eruby",
+		"haml",
+		"handlebars",
+		"htmldjango",
+		"html",
+		"jade",
+    "pug",
+		"leaf",
+		"markdown",
+		"php",
+		"razor",
+		"slim",
+		"svelte",
+		"twig",
+		"vue"
+	]
+}

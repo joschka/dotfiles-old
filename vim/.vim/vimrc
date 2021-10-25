@@ -1,3 +1,16 @@
+"
+" PACKAGE MANAGEMENT
+"
+
+" [reminder to myself]
+"   - ignore 'E185: Cannot find color scheme' error on very first vimrc run
+"   - restart vim after very first vimrc run
+
+" [reminder to myself] run these commands from time to time:
+"   :PlugClean (remove unlisted packages)
+"   :PlugUpgrade (update package manager itself)
+"   :PlugUpdate (update all packages)
+
 " install package manager
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -41,11 +54,6 @@ Plug 'w0rp/ale'
 Plug 'dhruvasagar/vim-prosession'
 
 call plug#end()
-
-" [reminder to myself] run these commands from time to time:
-"   :PlugClean (remove unlisted packages)
-"   :PlugUpgrade (update package manager itself)
-"   :PlugUpdate (update all packages)
 
 
 

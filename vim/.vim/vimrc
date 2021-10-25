@@ -1,4 +1,19 @@
 "
+" LINUX & MAC OS
+"
+
+" define variable containing current env's name
+" source: https://gist.github.com/romainl/4df4cde3498fada91032858d7af213c2
+if !exists('g:env')
+	if has('win64') || has('win32') || has('win16')
+		let g:env = 'WINDOWS'
+	else
+		let g:env = toupper(substitute(system('uname'), '\n', '', ''))
+    " 'LINUX', 'DARWIN', …
+	endif
+endif
+
+"
 " PACKAGE MANAGEMENT
 "
 
@@ -56,25 +71,34 @@ Plug 'dhruvasagar/vim-prosession'
 call plug#end()
 
 
+"
+" COLOR SCHEME
+"
 
-" set Vim-specific sequences for RGB colors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
-"color solarized8_high
-"set background=dark
+if g:env =~ 'LINUX'
+  " set Vim-specific sequences for RGB colors
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
-"let g:seoul256_background = 236
-"color seoul256
+set background=dark
 
-" Zenburn theme
+let g:seoul256_background = 236
+
 " darker background
 let g:zenburn_high_Contrast = 1
 " less visible line numbers
 let g:zenburn_subdued_LineNr = 1
 " increase contrast of visual selection
 let g:zenburn_alternate_Visual = 1
-colors zenburn
+
+" colorscheme solarized8_high
+" colorscheme seoul256
+colorscheme zenburn
+
+
+
 
 syntax enable
 "set spell spelllang=en_us

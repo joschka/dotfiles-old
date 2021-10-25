@@ -155,14 +155,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <Tab> :bnext<cr>
 nnoremap <S-Tab> :bprevious<cr>
 
-command! -bang FinpowerFiles call fzf#vim#files('~/projects/mge/mge-finpowerment', <bang>0)
-command! -bang FinpowerClientFiles call fzf#vim#files('~/projects/mge/mge-finpowerment/client/src', <bang>0)
-command! -bang FinpowerAppFiles call fzf#vim#files('~/projects/mge/mge-finpowerment/app', <bang>0)
-
-nnoremap <leader>f :FinpowerFiles<cr>
-nnoremap <leader>fc :FinpowerClientFiles<cr>
-nnoremap <leader>fa :FinpowerApp<cr>
-
 " Search in files in current file's folder
 nnoremap <silent> <Leader>pf :Files %:p:h<CR>
 
@@ -189,4 +181,12 @@ vnoremap <C-r> "hy:%s/<C-r>h//g<left><left>
 "let g:ale_fix_on_save=1
 
 "command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
+
+"
+" PROJECT SPECIFIC SETTINGS
+"
+
+" - use .vim/plugin/projects.vim
+"   (projects.vim is gitignored to prevent leakage of sensitive data)
 

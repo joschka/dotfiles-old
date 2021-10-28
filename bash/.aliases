@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+alias pyproject="cd ~/projects/PythonForProgrammers/examples"
+alias pystart="source /opt/anaconda/bin/activate root"
+alias pystop="conda deactivate"
+
+alias rain="mpv --fullscreen --mute=yes --loop-file=inf /home/j/Videos/rain.mp4"
+
+alias la="ls -l --almost-all --human-readable --time-style=long-iso -pF"
+# list subdirectories
+alias lar="la --recursive"
+# last modified
+alias lat="la -t --reverse"
+# largest file size
+alias las="la -S --reverse"
+# file extension
+alias lax="la -X"
+
+# mkdir and cd
+alias mkcd='m(){ mkdir -p "$1"; cd "$1" }; m '
+
+alias ..="cd .."
+alias ...="cd ..; cd .."
+
+# git: start new feature branch
+alias start="git fetch && git checkout origin/main && git checkout -b"
+# git: cleanup old branches
+alias cleanup="git remote prune origin && git branch -vv | grep 'origin/.*: gone]' | awk '{print \$1}' | xargs git branch -D"
+
+alias bi="bundle install"
+alias yi="yarn install"
+alias dbm="bundle exec rake db:migrate"
+alias s="bundle exec rails server"
+alias co="bundle exec rails console"
+alias sf="bi && yi && dbm && s"
+
+# processes
+alias psc='ps xawf -eo pid,user,cgroup,args'
+
+# deactivate screen locking
+alias blankoff="xset s off -dpms"
+# reactivate screen locking
+alias blankon="xset s 310 310 dpms 300 300 300"
+
+# paste from clipboard
+alias paste="xclip -out -selection clipboard"
+# copy to clipboard
+alias copy="xclip -in -selection clipboard"
+
+alias standby="systemctl suspend"
+alias off="poweroff"
+
+alias myip="curl http://ipecho.net/plain; echo"
+
+# npm install
+alias ni="npm install"
+
+# calendar
+alias cal="date && cal -y -w -m"
+
+
+alias ipy="ipython"
+
+
+# color picker
+alias pick="colorpicker --short"
+alias color="colorpicker --short"
